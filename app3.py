@@ -140,7 +140,7 @@ with st.sidebar:
     - **PIN Verde**: Municipios AZTECA, CITIBANAMEX, COPPEL, INBURSA, INVERCAP, PRINCIPAL, PROFUTURO, SURA, XXI-BANORTE.
     - **PIN Negro**: Otros municipios.
     - **PIN Azul**: Ubicación sugerida por K-Means.
-    - **PIN Gris**: Ubicación sugerida por Algoritmos Genéticos.
+    - **PIN Anaranjado**: Ubicación sugerida por Algoritmos Genéticos.
     """)
     st.write("Desarrollado por: **Javier Horacio Pérez Ricárdez**")
 
