@@ -14,6 +14,23 @@ import random
 from deap import base, creator, tools, algorithms
 from math import radians, sin, cos, sqrt, atan2
 
+
+# Estilo de fondo
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"]{
+background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
 # Función para calcular la distancia en kilómetros usando la fórmula haversine
 def calcular_distancia_km(lat1, lon1, lat2, lon2):
     # Radio de la Tierra en kilómetros
