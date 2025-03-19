@@ -290,7 +290,7 @@ if not df_filtrado.empty:
     st.dataframe(analisis_distancias_df)
 
     # Incrustar el mapa desde la URL proporcionada
-    st.write("### Mapa de PENSIONISSSTE")
+    st.write("### Mapa con los PIN de K-Means (azul), Algoritmo Genético (anaranjado) CAP's de PENSIONISSSTE (rojo)")
     st.write("A continuación se muestra el mapa incrustado desde la URL proporcionada:")
     mapa_url = "https://todosparaunospe.github.io/mapa_pensionissste/"
     st.components.v1.iframe(mapa_url, height=500)
