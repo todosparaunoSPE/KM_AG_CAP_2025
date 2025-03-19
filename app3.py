@@ -13,7 +13,7 @@ import numpy as np
 import random
 from deap import base, creator, tools, algorithms
 from math import radians, sin, cos, sqrt, atan2
-
+import requests
 
 # Estilo de fondo
 page_bg_img = """
@@ -288,6 +288,28 @@ if not df_filtrado.empty:
 
     # Mostrar el DataFrame
     st.dataframe(analisis_distancias_df)
+
+    # Incrustar el mapa desde la URL proporcionada
+    st.write("### Mapa de PENSIONISSSTE")
+    st.write("A continuación se muestra el mapa incrustado desde la URL proporcionada:")
+    mapa_url = "https://todosparaunospe.github.io/mapa_pensionissste/"
+    st.components.v1.iframe(mapa_url, height=500)
+
+    # Descargar el mapa desde la URL
+    st.write("### Descargar el Mapa de PENSIONISSSTE")
+    response = requests.get(mapa_url)
+    if response.status_code == 200:
+        with open("mapa_pensionissste.html", "wb") as file:
+            file.write(response.content)
+        with open("mapa_pensionissste.html", "rb") as file:
+            st.download_button(
+                label="Descargar Mapa de PENSIONISSSTE (HTML)",
+                data=file,
+                file_name="mapa_pensionissste.html",
+                mime="application/html"
+            )
+    else:
+        st.error("No se pudo descargar el mapa desde la URL proporcionada.")
 
 else:
     st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
