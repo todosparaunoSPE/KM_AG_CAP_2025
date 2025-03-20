@@ -155,6 +155,9 @@ with st.sidebar:
             mime="application/pdf"
         )
 
+# Enlace al 2o Escenario
+    st.markdown("[2o Escenario](https://kmagcap20251-yklkrgukwke2mnresypdsc.streamlit.app/)", unsafe_allow_html=True)
+
 # Selectbox para filtrar por ESTADO
 estado_seleccionado = st.selectbox('Selecciona un estado', df['ESTADO'].unique())
 
