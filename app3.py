@@ -131,7 +131,7 @@ df = load_data()
 # Título de la aplicación
 st.title("Modelos utilizados para la propuesta de apertura de nuevos CAP's o en su caso reubicación: K-Means y Algoritmos Genéticos")
 # Subtítulo corregido
-st.markdown("### Marzo de 2025")
+st.markdown("### Marzo del 2025")
 
 # Sidebar con sección de ayuda y tu nombre
 with st.sidebar:
