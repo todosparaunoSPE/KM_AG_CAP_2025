@@ -155,7 +155,7 @@ with st.sidebar:
             mime="application/pdf"
         )
 
-# Enlace al 2o Escenario
+    # Enlace al 2o Escenario
     st.markdown("[2o Escenario](https://kmagcap20251-yklkrgukwke2mnresypdsc.streamlit.app/)", unsafe_allow_html=True)
 
 # Selectbox para filtrar por ESTADO
@@ -296,7 +296,6 @@ if not df_filtrado.empty:
 
     # Incrustar el mapa desde la URL proporcionada
     st.write("### Mapa con los PIN de K-Means (azul), Algoritmo Genético (anaranjado) CAP's de PENSIONISSSTE (rojo)")
-    #st.write("A continuación se muestra el mapa incrustado desde la URL proporcionada:")
     mapa_url = "https://todosparaunospe.github.io/mapa_pensionissste/"
     st.components.v1.iframe(mapa_url, height=500)
 
@@ -315,8 +314,24 @@ if not df_filtrado.empty:
             )
     else:
         st.error("No se pudo descargar el mapa desde la URL proporcionada.")
+
+    # === MARCA DE AGUA (posición corregida) ===
+    st.markdown("""
+    <style>
+    .watermark {
+        position: fixed;
+        bottom: 10%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.2);
+        z-index: 1000;
+        pointer-events: none;
+    }
+    </style>
+    <div class="watermark">Javier Horacio Pérez Ricárdez</div>
+    """, unsafe_allow_html=True)
+
 else:
-        st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
-  
-
-
+    st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
