@@ -316,5 +316,25 @@ if not df_filtrado.empty:
     else:
         st.error("No se pudo descargar el mapa desde la URL proporcionada.")
 
+    # Marca de agua con tu nombre
+    st.markdown("""
+    <style>
+    .watermark {
+        position: fixed;
+        bottom: 10%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.2);
+        z-index: 1000;
+        pointer-events: none;
+    }
+    </style>
+    <div class="watermark">Javier Horacio Pérez Ricárdez</div>
+    """, unsafe_allow_html=True)
+
+else:
+    st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
 else:
     st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
