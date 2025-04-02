@@ -315,8 +315,11 @@ if not df_filtrado.empty:
             )
     else:
         st.error("No se pudo descargar el mapa desde la URL proporcionada.")
+else:
+    st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
+else:
 
-        # Marca de agua con tu nombre
+ # Marca de agua con tu nombre
         st.markdown("""
         <style>
         .watermark {
@@ -332,8 +335,6 @@ if not df_filtrado.empty:
         }
         </style>
        <div class="watermark">Javier Horacio Pérez Ricárdez</div>
-       """, unsafe_allow_html=True)
-else:
-    st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
-else:
+       """, unsafe_allow_html=True) 
+    
     st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
