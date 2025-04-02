@@ -317,6 +317,5 @@ if not df_filtrado.empty:
         st.error("No se pudo descargar el mapa desde la URL proporcionada.")
 else:
     st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
-else:   
-    st.warning(f"No hay datos disponibles para el estado de {estado_seleccionado}.")
+
 
