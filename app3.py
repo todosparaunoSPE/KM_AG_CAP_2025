@@ -325,7 +325,7 @@ if not df_filtrado.empty:
         width: 100%;
         text-align: center;
         font-size: 24px;
-        color: rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.8);
         z-index: 1000;
         pointer-events: none;
     }
